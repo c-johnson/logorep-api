@@ -12,8 +12,6 @@ class ApplicationController < ActionController::API
 
     node = doc.css("#_ctl0_ContentPlaceHolder1_lblMeetings")
 
-    binding.pry
-
     # reader = Nokogiri::XML::Reader(url)
 
     s = File.read("db/fs/meetings.json")
@@ -27,13 +25,20 @@ class ApplicationController < ActionController::API
     # end
   end
 
-  def display
-    db = SQLite3::Database.open "db/logorep-db.sqlite3"
-    result = db.execute "SELECT * FROM jurisdictions;"
+  def data
 
-    db.close
+    @juris = Jurisdiction.all
 
-    binding.pry
+    render json: @juris
+
+    # render html: 
+
+    # db = SQLite3::Database.open "db/logorep-db.sqlite3"
+    # result = db.execute "SELECT * FROM jurisdictions;"
+    #
+    # db.close
+    #
+    # binding.pry
 
   end
 end

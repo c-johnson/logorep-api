@@ -1,3 +1,3 @@
 class Councilmember < ApplicationRecord
-  attr_accessor :name
+  # attr_accessor :name
 end

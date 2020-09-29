@@ -1,0 +1,21 @@
+<h1>Logorep</h1>
+
+<ul>
+<% @juris.each do |j| %>
+  <li>
+    <td><%= j.name %></td>
+    <td><%= j.state %></td>
+    <td><%= link_to "Website", j.website_main %></td>
+
+    <h4>Councilmembers:</h4>
+    <% @council.each do |c| %>
+      <ul>
+      <% if c.jurisdiction_id == j.id %>
+        <li><%= c.name %>, <%= c.phone_number %>, <% c.email %></li>
+      <% end %>
+      </ul>
+    <% end %>
+
+  </li>
+<% end %>
+</ul>
