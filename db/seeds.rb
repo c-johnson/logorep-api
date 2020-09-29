@@ -6,7 +6,10 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+# Jurisdictions
+
 Jurisdiction.create(
+  id: 1,
   name: "Kansas City",
   state: "MO",
   city_county: "City",
@@ -14,6 +17,95 @@ Jurisdiction.create(
   website_meeting: "http://cityclerk.kcmo.org/liveweb/common/",
   website_meeting_cc: "http://cityclerk.kcmo.org/liveweb/Groups/Group.aspx?q=S8XiC%2fRs0WwU77m0O6H8FzyApAkUOfuYcNq%2blMKnkV1La39jbh4Sxos8%2bIqtvChp"
 )
+
+# https://www.kcmo.gov/city-hall/city-officials/city-council-members
+Councilmember.create(
+  name: "Quinton Lucas",
+  position: "mayor",
+
+  jurisdiction_id: 1,
+
+  phone_number: "816-513-3500",
+  email: "MayorQ@kcmo.org",
+  twitter: "MayorLucasKC",
+  facebook: "quinton.lucas",
+  instagram: "Quinton_Lucas"
+)
+
+Councilmember.create(
+  name: "Kevin McManus",
+  position: "mayor_pro_temp",
+  phone_number: "816-513-6525",
+
+  jurisdiction_id: 1,
+)
+
+Councilmember.create(
+  name: "Heather Hall",
+
+  jurisdiction_id: 1,
+)
+
+Councilmember.create(
+  name: "Kevin O'Neill",
+
+  jurisdiction_id: 1,
+)
+
+Councilmember.create(
+  name: "Teresa Loar",
+
+  jurisdiction_id: 1,
+)
+
+Councilmember.create(
+  name: "Dan Fowler",
+
+  jurisdiction_id: 1,
+)
+
+Councilmember.create(
+  name: "Brandon Ellington",
+
+  jurisdiction_id: 1,
+)
+
+Councilmember.create(
+  name: "Melissa Robinson",
+
+  jurisdiction_id: 1,
+)
+
+Councilmember.create(
+  name: "Katheryn Shields",
+
+  jurisdiction_id: 1,
+)
+
+Councilmember.create(
+  name: "Eric Bunch",
+
+  jurisdiction_id: 1,
+)
+
+Councilmember.create(
+  name: "Lee Barnes, Jr",
+
+  jurisdiction_id: 1,
+)
+
+Councilmember.create(
+  name: "Ryana Parks-Shaw",
+
+  jurisdiction_id: 1,
+)
+
+Councilmember.create(
+  name: "Andrea Bough",
+
+  jurisdiction_id: 1,
+)
+
 
 Jurisdiction.create(
   name: "Kansas City",

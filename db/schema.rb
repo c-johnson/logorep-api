@@ -10,7 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_09_29_160013) do
+ActiveRecord::Schema.define(version: 2020_09_29_160014) do
+
+  create_table "councilmembers", force: :cascade do |t|
+    t.string "name"
+    t.string "phone_number"
+    t.string "email"
+    t.string "twitter"
+    t.string "facebook"
+    t.string "instagram"
+    t.string "position"
+    t.integer "jurisdiction_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "jurisdictions", force: :cascade do |t|
     t.string "name"
@@ -23,4 +36,5 @@ ActiveRecord::Schema.define(version: 2020_09_29_160013) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  add_foreign_key "councilmembers", "jurisdictions"
 end
