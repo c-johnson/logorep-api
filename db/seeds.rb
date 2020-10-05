@@ -42,8 +42,14 @@ Councilmember.create(
 
 Councilmember.create(
   name: "Heather Hall",
+  position: "district_1",
 
   jurisdiction_id: 1,
+
+  phone_number: "816-513-6505",
+  email: "heather.hall@kcmo.org",
+  twitter: "Hall1stDistrict",
+  facebook: "heather.hall.9615566"
 )
 
 Councilmember.create(
