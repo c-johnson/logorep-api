@@ -5,8 +5,6 @@ class ApplicationController < ActionController::API
   def record
     # @response = {sup: "fam"}
 
-    jurisdictions = Jurisdiction.all
-    
 
     url = "http://cityclerk.kcmo.org/liveweb/Groups/Group.aspx?q=S8XiC%2fRs0WwU77m0O6H8FzyApAkUOfuYcNq%2blMKnkV1La39jbh4Sxos8%2bIqtvChp"
 
